@@ -6,7 +6,6 @@ let vol_number = document.getElementById("volume-number");
 let vol_slider = document.getElementById("volume-slider");
 let horn_sound = document.getElementById("horn-sound");
 let vol_indicator = document.getElementById("volume-image");
-
 let sound_image = document.getElementById("sound-image");
 let audio_select = document.getElementById("audio-selection");
 let submit = document.getElementById("party-horn-form");
