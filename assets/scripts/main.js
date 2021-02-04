@@ -9,6 +9,7 @@ let vol_indicator = document.getElementById("volume-image");
 let sound_image = document.getElementById("sound-image");
 let audio_select = document.getElementById("audio-selection");
 let submit = document.getElementById("party-horn-form");
+let button = document.getElementById("honk-btn");
 
 vol_number.addEventListener("input", changeVolWithNum);
 vol_slider.addEventListener("input", changeVolWithSlide);
@@ -48,6 +49,13 @@ function changeVolume(newVol){
         vol_indicator.src = "./assets/media/icons/volume-level-0.svg";
     }
     horn_sound.volume = newVol/100;
+    if(newVol == 0){
+        button.style.background = "grey";
+        button.disabled = true;
+    } else{
+        button.style.background = "#ddd"
+        button.disabled = false;
+    }
 }
 
 function changeSound(event){
